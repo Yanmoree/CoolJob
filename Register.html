@@ -1,0 +1,80 @@
+<form action="action_page.php">
+    <head>
+        <style>
+            body {
+                width: 400px;
+                height: 500px;
+                border: 1px solid black;
+                background-color:unset;
+                border-radius: 50px;
+            }
+            h1 {
+                text-align: center;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                font-size: 36px;
+                color: white;
+                margin-top: -10px;
+            }
+            p {
+                text-align: center;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                font-size: 22px;
+                color: white;
+                margin-top: -10px;
+            }
+            b {
+                color: white;
+            }
+            .container {
+                padding: 50px;
+            }
+            input[type=text], input[type=password] {
+                width: 100%;
+                padding: 10px;
+                background-color: white;
+                display: inline-block;
+                border: 1px solid rgb(135, 185, 196);
+                border-radius: 15px;
+                margin-top: 5px;
+                margin-bottom: 5px;
+            }
+            a {
+                color: rgb(151, 208, 249);
+            }
+            button {
+                width: 200px;
+                height: 40px;
+                border: 1px solid rgb(135, 185, 196);
+                border-radius: 10px;
+                margin-top: 20px;
+                display: flex;
+                font-size: 20px;
+                justify-content: center;
+                padding-top: 7px;
+                padding-bottom: 7px;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        </style>
+    </head>
+    <body>
+    <div class="container">
+        <h1>Регистрация</h1>
+
+        <label for="email"><b>Почта:</b></label>
+        <input type="text" placeholder="Введите Email" name="Email" required>
+
+        <label for="psw"><b>Пароль:</b></label>
+        <input type="password" placeholder="Введите пароль" name="psw" required>
+
+        <label for="psw-repaet"><b>Повторите пароль:</b></label>
+        <input type="password" placeholder="Повторите пароль" name="psw-repaet" required>
+
+        <button type="submit" class="resterbtn">Зарегестрироваться</button>
+    </div>
+    <div class="signin">
+        <p>Уже зарегестрированны? <a href="#">Войти</a></p>
+    </div>
+</body>
+</form>
