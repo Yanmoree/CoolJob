@@ -1,35 +1,38 @@
 <form action="action_page.php">
     <head>
+        <title>Регистрация CoolJob</title>
         <style>
             body {
-                width: 400px;
-                height: 500px;
-                border: 1px solid black;
-                background-color:unset;
+                width: 800px;
+                height: 880px;
+                background-color:rgb(190, 189, 253);
                 border-radius: 50px;
+                margin-left: 550px;
             }
             h1 {
                 text-align: center;
                 font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-                font-size: 36px;
-                color: white;
+                font-size: 52px;
+                color: black;
                 margin-top: -10px;
             }
             p {
                 text-align: center;
                 font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-                font-size: 22px;
-                color: white;
+                font-size: 32px;
+                color: black;
                 margin-top: -10px;
             }
             b {
-                color: white;
+                color: black;
+                font-size: 44px;
             }
             .container {
                 padding: 50px;
             }
             input[type=text], input[type=password] {
                 width: 100%;
+                height: 100px;
                 padding: 10px;
                 background-color: white;
                 display: inline-block;
@@ -37,30 +40,34 @@
                 border-radius: 15px;
                 margin-top: 5px;
                 margin-bottom: 5px;
+                font-size: 38px;
             }
             a {
-                color: rgb(151, 208, 249);
+                color: rgb(98, 98, 98);
             }
             button {
-                width: 200px;
-                height: 40px;
+                width: 400px;
+                height: 80px;
                 border: 1px solid rgb(135, 185, 196);
                 border-radius: 10px;
                 margin-top: 20px;
                 display: flex;
-                font-size: 20px;
+                font-size: 40px;
                 justify-content: center;
-                padding-top: 7px;
+                padding-top: 12px;
                 padding-bottom: 7px;
                 font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
                 margin-left: auto;
                 margin-right: auto;
             }
+            ::placeholder {
+                font-size: 32px;
+            }
         </style>
     </head>
     <body>
     <div class="container">
-        <h1>Регистрация</h1>
+        <h1>Регистрация на CoolJob</h1>
 
         <label for="email"><b>Почта:</b></label>
         <input type="text" placeholder="Введите Email" name="Email" required>
