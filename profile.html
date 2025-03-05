@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Профиль</title>
+    <style>
+        body {
+            background-color: rgb(190, 189, 253);
+            width: auto;
+            min-width: 960px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            position: relative;
+        }
+        h1 {
+            color: rgb(60, 51, 119);
+            font-size: 56px;
+            margin-left: 50px;
+            margin-top: -5px;
+        }
+        .profile-container {
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .profile-container h2 {
+            color: rgb(60, 51, 119);
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+        .profile-container label {
+            font-size: 18px;
+            color: rgb(60, 51, 119);
+        }
+        .profile-container input[type=text], .profile-container input[type=email], .profile-container input[type=number], .profile-container textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .profile-container button[type=submit] {
+            background-color: rgb(60, 51, 119);
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        .profile-container button[type=submit]:hover {
+            opacity: 0.8;
+        }
+        .top-buttons {
+            display: flex;
+            margin-top: -30px;
+        }
+        .top-buttons a {
+            color: rgb(60, 51, 119);
+            text-decoration: none;
+            font-size: 26px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            cursor: pointer;
+            font-style: normal;
+            margin-left: -200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1><a href="Cooljob.html" style="color: inherit; text-decoration: none;">CoolJob</a></h1>
+        <div class="top-buttons">
+            <a href="Page2.html">Поиск работы</a>
+            <a href="Startup.html" style="margin-left: 100px;">Поиск стартапа</a>
+            <a href="Support.html" style="margin-left: 100px;">Поддержка</a>
+        </div>
+        <a href="profile.html" class="profile-button">
+            <img src="Image/Avatar.png" alt="Профиль" style="height: 40px; width: 40px; border-radius: 50%; cursor: pointer;">
+        </a>
+    </div>
+    <div class="profile-container">
+        <h2>Профиль</h2>
+        <form action="/submit_profile" method="post">
+            <label for="profession">Профессия</label>
+            <input type="text" id="profession" name="profession" placeholder="Введите вашу профессию" required>
+            
+            <label for="age">Возраст</label>
+            <input type="number" id="age" name="age" placeholder="Введите ваш возраст" required>
+            
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Введите ваш email" required>
+            
+            <label for="education">Образование</label>
+            <textarea id="education" name="education" placeholder="Опишите ваше образование" rows="4" required></textarea>
+            
+            <label for="experience">Опыт работы</label>
+            <textarea id="experience" name="experience" placeholder="Опишите ваш опыт работы" rows="4" required></textarea>
+            
+            <button type="submit">Сохранить</button>
+        </form>
+    </div>
+</body>
+</html>

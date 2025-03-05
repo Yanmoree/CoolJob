@@ -38,48 +38,6 @@
             .container-body {
                 display: flex;
             }
-            .rectangle-1 {
-                background-color: white;
-                max-width: 300px;
-                width: 300px;
-                height: auto;
-                margin-top: 240px;
-                margin-left: 100px;
-                border: 1px solid black;
-                border-radius: 15px 0px 0px 15px;
-                font-size: 20px;
-                padding-left: 60px;
-                padding-top: 13px;
-                color: rgb(105, 105, 105);
-                
-            }
-            .rectangle-2 {
-                background-color: white;
-                width: 250px;
-                height: auto;
-                margin-top: 240px;
-                margin-left: 00px;
-                border: 1px solid black;
-                font-size: 20px;
-                padding-left: 60px;
-                padding-top: 13px;
-                color: rgb(105, 105, 105);
-            }
-            .rectangle-3 {
-                background-color: rgb(60, 51, 119);
-                width: auto;
-                height: auto;
-                border-radius: 0px 15px 15px 0px;
-                margin-top: 240px;
-                margin-left: -1px;
-                font-size: 25px;
-                padding-left: 20px;
-                padding-top: 13px;
-                padding-bottom: 13px;
-                padding-right: 20px;
-                font-style:inherit;
-                color: white;
-            }
             button[type=Sign] {
                 height: 40px;
                 width: auto;
@@ -87,12 +45,13 @@
                 border: 1px solid black;
                 color: white;
                 padding: 5px;
-                display: block;
+                display: flex;
                 border-radius: 15px;
-                margin-top: -400px;
+                margin-top: -37%;
                 margin-left: 1430px;
                 font-size: 22px;
                 font-style: initial;
+                cursor: pointer;
             }
             button[type=submit] {
                 height: 40px;
@@ -104,6 +63,7 @@
                 display: block;
                 margin-top: 10px;
                 margin-left: 110px;
+                cursor: pointer;
                 font-size: 22px;
                 font-style: initial;
             }
@@ -122,9 +82,10 @@
             button[type=Register] {
                 height: auto;
                 width: auto;
-                margin-left: 1290px;
+                margin-left: 84%;
                 display: block;
-                margin-top: -35px;
+                margin-top: -33px;
+                cursor: pointer;
                 font-size: 18px;
                 border: 0px;
                 background-color: unset;
@@ -246,6 +207,31 @@
                 width: 130px;   
                 margin-top: 25px;
             }
+            input[type=search] {
+                border: 1px black solid;
+                height: 50px;
+                width: 300px;
+                outline: none;
+                padding-left: 40px;
+                font-size: 20px;
+                font-family: 'Times New Roman', Times, serif;
+            }
+            button[type=найти] {
+                height: 50px;
+                width: 100px;
+                background-color: rgb(60, 51, 119);
+                border: 1px solid black;
+                color: white;
+                border-radius: 0 15px 15px 0;
+                font-size: 22px;
+                display: inline;
+                font-family: 'Times New Roman', Times, serif;
+                margin-top: 200px;
+            }
+            .search {
+                margin-top: 7%;
+                margin-left: 5%;
+            }
         </style>
     </head>
     <body>
@@ -253,21 +239,16 @@
         <h2>Поиск работы</h2>
         <h3>Стартап</h3>
         <h4>Работа в один клик - легко и просто!</h4>
-        <div class="container-body">
-            <div class="rectangle-1">Указать специальность</div>
-            <div class="rectangle-2">Указать город</div>
-            <div class="rectangle-3">Поиск</div>
-        </div>
         <div class="Image">
             <div class="Image-1">
                 <img src="Image/Body.png" width="600px">
             </div>
-            <div class="Image-2">
+            <!-- <div class="Image-2">
                 <img src="Image/Search.png" width="40px">
             </div>
             <div class="Image-3">
                 <img src="Image/Geo.png" width="40px">
-            </div>
+            </div> -->
         </div>
 
             <button type="Sign" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Войти</button>
@@ -316,11 +297,17 @@
                 </form>
             </div>
             <div class="search">
-                <input type="search" placeholder="Укажите специальность" list="<идентификатор>">
-                <datalist id="<идентификатор>">
+                <input type="search" placeholder="Укажите специальность" list="специальность" style="border-radius: 15px 0 0 15px;">
+                <input type="search" placeholder="Укажите город" list="город" style="margin-left: -4px;">
+                <datalist id="специальность">
                     <option value="Search">
                     <option value="identification">
                 </datalist>
+                <datalist id="город">
+                    <option value="Москва">
+                    <option value="Вологда">
+                </datalist>
+                <button type="найти" onclick="window.open('Page2.html', '_blank')" style="margin-left: -5px;">Найти</button>
             </div>
             <script src="script.js">
             </script>
